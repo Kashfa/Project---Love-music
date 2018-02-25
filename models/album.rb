@@ -61,7 +61,7 @@ end
   def self.all()
     sql = "SELECT * FROM albums"
     albums = SqlRunner.run( sql )
-    result = albums.map { |album| album.new( album ) }
+    result = albums.map { |album| Album.new( album ) }
     return result
   end
 
